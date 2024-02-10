@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин замков</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+{% extends 'base.html' %}
+
+{% block title %}Главная - Магазин замков{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="locks-container">
+    <h1>Добро пожаловать в магазин замков</h1>
+    <ul>
+        {% for lock in locks %}
+            <li>
+                <img src="{{ url_for('static', filename='images/lock' + lock['lock_id_str'] + '.jpg') }}" alt="{{ lock['name'] }}" style="max-width: 100px; max-height: 100px;">
+                <br>
+                {{ lock["name"] }} - {{ lock["price"] }} руб.
+                <a href="{{ url_for('buy', lock_id=lock['id']) }}">Купить</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+            </div>
+</div>
+
+</body>
+</html>

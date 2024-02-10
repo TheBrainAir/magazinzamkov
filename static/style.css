@@ -1,0 +1,39 @@
+/* Дополнительные стили для центрирования контейнера и замков */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование контейнера по горизонтали */
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px; /* Расстояние от края экрана */
+    padding: 20px;
+    text-align: center; /* Центрирование внутреннего содержимого по горизонтали */
+}
+
+.locks-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Центрирование блоков с замками по горизонтали */
+}
+
+.lock {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px; /* Расстояние между блоками с замками */
+    text-align: center; /* Центрирование внутреннего содержимого по горизонтали */
+}
+
+.lock img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Добавьте другие стили по необходимости */
